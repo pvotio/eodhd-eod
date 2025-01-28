@@ -11,7 +11,7 @@ def main():
 
     logger.info("Loading tickers...")
     tickers = load_tickers()
-    logger.info(f"{len(tickers)} Exchanges loaded from database.")
+    logger.info(f"{len(tickers)} Tickers loaded from database.")
     logger.info("Initializing Engine...")
     engine = Engine(tickers, exchanges)
     logger.info("Engine initialized successfully.")
