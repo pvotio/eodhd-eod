@@ -25,7 +25,7 @@ class Engine:
 
     def _fetch_exchanges_eod(self):
         today = datetime.utcnow().replace(tzinfo=pytz.timezone("CET"))
-        date = (today - timedelta(2)).strftime("%Y-%m-%d")
+        date = (today - timedelta(1)).strftime("%Y-%m-%d")
         logger.info(f"Pulling data for {date}")
         for exchange, _ in self.exchanges:
             logger.debug(f"Fetching EOD for {exchange}")
